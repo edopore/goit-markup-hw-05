@@ -82,16 +82,26 @@ a:link {
 }
 .nav-bar {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
 }
 .logo > a {
   color: var(--blue-font-color);
 }
 
-.nav-page::after {
-  content: " ";
+.current::after {
+  content: "";
+  position: relative;
+  display: inline-block;
   width: 100%;
+  height: 4px;
+  bottom: -37px;
   background-color: var(--blue-font-color);
+  border-radius: 4px;
+}
+.nav-link-page {
+  display: flex;
+  align-items: start;
+  gap: 25%;
 }
 .nav-page a {
   color: var(--title-font-color);
@@ -114,27 +124,22 @@ a:link {
   background-color: transparent;
   text-decoration: none;
 }
-.nav-bar ul {
-  margin: 32px 0px;
-}
 .svg-contact {
   fill: var(--desc-font-color);
   width: 20px;
   height: 20px;
 }
-.nav-bar ul li {
-  display: inline-block;
-  padding: 0px 15px;
-  font-weight: 500;
+.nav-bar {
+  padding: 32px 0px;
+  display: flex;
+  justify-content: space-between;
 }
 .nav-info,
 .nav-info .nav-contact {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   gap: 10px;
 }
-
 /*Main*/
 /*section solution-title*/
 .title {
