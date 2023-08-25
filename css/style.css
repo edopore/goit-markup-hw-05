@@ -87,7 +87,6 @@ a:link {
 .logo > a {
   color: var(--blue-font-color);
 }
-
 .current::after {
   content: "";
   position: relative;
@@ -106,10 +105,12 @@ a:link {
 .nav-page a {
   color: var(--title-font-color);
   text-decoration: none;
+  transition: color var(--time-animation) var(--cubic-bezier-animation);
 }
 .nav-contact a {
   color: var(--desc-font-color);
   text-decoration: none;
+  transition: color var(--time-animation) var(--cubic-bezier-animation);
 }
 .nav-page a:hover {
   color: var(--blue-font-color);
@@ -128,6 +129,7 @@ a:link {
   fill: var(--desc-font-color);
   width: 20px;
   height: 20px;
+  transition: fill var(--time-animation) var(--cubic-bezier-animation);
 }
 .nav-bar {
   padding: 32px 0px;
@@ -195,6 +197,12 @@ a:link {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
+}
+.btn {
+  transition: transform var(--time-animation) var(--cubic-bezier-animation);
+}
+.btn:hover {
+  transform: scale(1.1);
 }
 .btn-sol {
   background-color: var(--blue-font-color);
