@@ -5,6 +5,7 @@
   --desc-font-color: #757575;
   --desc-font-color-shadow: rgba(117, 117, 117, 0.2);
   --service-color-shadow: rgba(47, 48, 58, 0.8);
+  --modal-fixed-background: rgba(0, 0, 0, 0.5);
   --title-font-color: #212121;
   --team-bg-color: #f5f4fa;
   --title-bg-color: #2f303a;
@@ -86,6 +87,7 @@ a:link {
 .logo > a {
   color: var(--blue-font-color);
 }
+
 .nav-page::after {
   content: " ";
   width: 100%;
@@ -173,13 +175,13 @@ a:link {
   width: 80%;
 }
 .backdrop {
-  position: fixed;
   display: flex;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: var(--modal-fixed-background);
   opacity: 1;
   visibility: visible;
   transition: opacity var(--time-animation) var(--cubic-bezier-animation);
@@ -278,6 +280,8 @@ a:link {
   display: flex;
   justify-content: center;
   gap: 10px;
+  transition: background-color var(--time-animation)
+    var(--cubic-bezier-animation);
 }
 .ul-links .social-link {
   display: flex;
@@ -290,6 +294,7 @@ a:link {
 .social-link:hover {
   background-color: var(--blue-font-color);
   cursor: pointer;
+  transform: scale(1.2);
 }
 .social-link:hover > .svg-icon {
   fill: var(--white);
@@ -314,11 +319,13 @@ a:link {
   padding: 10px;
   width: 106px;
   height: 52px;
+  transition: scale var(--time-animation) var(--cubic-bezier-animation);
 }
 
 .client-card:hover {
   cursor: pointer;
   border-color: var(--blue-font-color);
+  transform: scale(1.2);
 }
 .client-card:hover > .client-logo {
   fill: var(--blue-font-color);
