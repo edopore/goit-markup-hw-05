@@ -37,7 +37,9 @@ header {
 div h1 {
   text-align: center;
 }
-
+ul {
+  padding: 0;
+}
 h2 {
   color: var(--title-font-color);
 }
@@ -211,6 +213,26 @@ a:link {
   font-weight: 700;
   line-height: 30px;
 }
+.p-modal {
+  padding: 20px;
+  margin: 0;
+}
+.btn-close-modal {
+  background-color: transparent;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  border: 1px solid var(--desc-font-color);
+  border-radius: 100%;
+  position: relative;
+  bottom: 75%;
+  left: 45%;
+  width: 30px;
+  height: 30px;
+}
+.svg-close-modal {
+  background-color: transparent;
+}
 /*Section values*/
 .values ul {
   box-sizing: content-box;
@@ -356,6 +378,7 @@ a:link {
 }
 .address li a {
   color: var(--desc-font-color);
+  transition: color var(--time-animation) var(--cubic-bezier-animation);
 }
 .address li h2 a {
   color: var(--blue-font-color);
