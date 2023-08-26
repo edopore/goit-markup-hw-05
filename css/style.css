@@ -180,8 +180,8 @@ a:link {
   align-items: center;
   background-color: white;
   padding: 10% 0;
-  height: 80%;
-  width: 80%;
+  width: 528px;
+  height: 581px;
 }
 .backdrop {
   display: flex;
@@ -225,13 +225,17 @@ a:link {
   border: 1px solid var(--desc-font-color);
   border-radius: 100%;
   position: relative;
-  bottom: 75%;
+  bottom: 65%;
   left: 45%;
   width: 30px;
   height: 30px;
 }
 .svg-close-modal {
   background-color: transparent;
+  position: relative;
+  top: 5px;
+  width: 18px;
+  height: 18px;
 }
 /*Section values*/
 .values ul {
